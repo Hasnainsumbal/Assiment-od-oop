@@ -1,17 +1,23 @@
-interface printable {
-void print();
+interface Drawable
+{
+	 void draw();
 }
- class A6 implements printable
- {
- public void print()
- {
- System.out.print("Hello");
- }
- }
- public class A61
- { 
-  public static void main(String args[]){
-  A6 obj = new A6();
-  obj.print();
-  }
-  }
+class Rectangle implements Drawable {
+	public void draw(){
+	System.out.println("Drawing rectangle");
+	}
+}
+class Circle implements Drawable{
+	public void draw(){
+	System.out.println("Drawing circle");
+	}
+}
+public class A61 {
+	public static void main(String args[]) {
+		Rectangle r = new Rectangle();
+		Circle c = new Circle();
+		 r.draw();
+		 c.draw();
+	}
+}
+	
